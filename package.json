@@ -1,0 +1,23 @@
+{
+  "name": "phfbchat",
+  "private": false,
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kpodemski/phfbchat"
+  },
+  "author": "Krystian Podemski",
+  "homepage": "https://github.com/kpodemski/phfbchat#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compress": "^1.3.0"
+  },
+  "options": {
+    "moduleName": "phfbchat"
+  }
+}
