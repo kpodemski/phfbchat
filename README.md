@@ -2,7 +2,7 @@
 
 ### How to use?
 
-- [ ] Download module from: https://github.com/kpodemski/phfbchat/raw/master/phfbchat-v1.0.0.zip
+- [ ] Download module from: https://goo.gl/UAoGZk
 - [ ] Get your Facebook Page ID by going to https://findmyfbid.com
 - [ ] Install module from Modules tab
 - [ ] Go to the Configuration page of module
