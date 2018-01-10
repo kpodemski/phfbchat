@@ -15,4 +15,10 @@
 
 ### Created by [Krystian Podemski](http://www.podemski.info) from [PrestaHome](http://www.prestahome.com)
 
+### My products
+
+* Modules on CodeCanyon [here](https://codecanyon.net/user/prestahome/portfolio?ref=prestahome)
+* Themes on ThemeForest [here](https://themeforest.net/user/prestahome/portfolio?ref=prestahome)
+* More modules, and more themes, on PrestaShop Addons Marketplace [here](https://addons.prestashop.com/en/111_prestahome)
+
 ![PrestaHome](http://www.prestahome.com/cover.jpg)
