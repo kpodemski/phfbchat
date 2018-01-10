@@ -12,3 +12,7 @@
 
 * PHP 5.4
 * PrestaShop 1.6.1.6+
+
+### Created by Krystian Podemski from PrestaHome
+
+![PrestaHome](http://www.prestahome.com/cover.jpg)
