@@ -38,7 +38,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
     {
         $this->name = 'phfbchat';
         $this->tab = 'front_office_features';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'PrestaHome';
         $this->need_instance = 0;
         $this->bootstrap = true;

@@ -8,16 +8,17 @@
     js = d.createElement('script');
     js.id = id;
     js.async = true;
-    js.src = "//connect.facebook.net/{$phfbchat_locale}/all.js";
+    js.src = "//connect.facebook.net/{$phfbchat_locale}/sdk/xfbml.customerchat.js";
     d.getElementsByTagName('head')[0].appendChild(js);
 {rdelim}(document));
 
 window.fbAsyncInit = function () {ldelim}
-    FB.init({
-        appId: {$phfbchat_app_id},
-        xfbml            : true
+    FB.init({ldelim}
+       appId: {$phfbchat_app_id},
+        autoLogAppEvents : true,
+        xfbml : true,
+        version : 'v3.1'
     {rdelim});
-
 {rdelim};
 </script>
 {/if}
