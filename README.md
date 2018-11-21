@@ -2,7 +2,7 @@
 
 ### How to use?
 
-- [ ] Download module from: https://goo.gl/UAoGZk
+- [ ] Download module from: https://goo.gl/grFfBs
 - [ ] Get your Facebook Page ID by going to https://findmyfbid.com
 - [ ] Install module from Modules tab
 - [ ] Go to the Configuration page of module
