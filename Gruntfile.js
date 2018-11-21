@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         compress: {
             main: {
                 options: {
-                    archive: moduleName + '-v' + version + '.zip'
+                    archive: moduleName + '-latest.zip'
                 },
                 files: [
                     {src: ['controllers/**'], dest: moduleName + '/', filter: 'isFile'},

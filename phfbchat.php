@@ -38,7 +38,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
     {
         $this->name = 'phfbchat';
         $this->tab = 'front_office_features';
-        $this->version = '1.0.1';
+        $this->version = '1.1.0';
         $this->author = 'PrestaHome';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -122,20 +122,10 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
                         'type' => 'html',
                         'html_content' => '
                             <div class="alert alert-info">
-                            '.$this->l('To use Messanger Chat you need to add your full domain to allowed ones by going to: FB Page -> Settings -> Messanger -> White-listed domains').'
+                            '.$this->l('To use Messenger Chat you need to add your full domain to allowed ones by going to: FB Page -> Settings -> Messanger -> White-listed domains').'
                             </div>'
                         ,
                         'ignore' => true
-                    ),
-
-                    array(
-                        'type'  => 'text',
-                        'lang'  => false,
-                        'label' => $this->l('App ID:'),
-                        'name'  => $this->options_prefix.'APP_ID',
-                        'default' => '',
-                        'desc' => $this->l('More informations: https://developers.facebook.com/docs/apps/register'),
-                        'validate' => 'isUnsignedInt',
                     ),
 
                     array(
@@ -151,17 +141,41 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
                     array(
                         'type'  => 'text',
                         'lang'  => true,
-                        'label' => $this->l('Language code:'),
-                        'name'  => $this->options_prefix.'LOCALE',
+                        'label' => $this->l('Logged in message:'),
+                        'name'  => $this->options_prefix.'LOGGED_IN',
                         'default' => '',
-                        'desc' => $this->l('For eg. pl_PL, en_EN, more informations: https://developers.facebook.com/docs/internationalization'),
+                        'desc' => $this->l('The message displayed on the chat box for logged in users, leave empty to display default text'),
                         'validate' => 'isAnything',
                     ),
-
+                    array(
+                        'type'  => 'text',
+                        'lang'  => true,
+                        'label' => $this->l('Logged out message:'),
+                        'name'  => $this->options_prefix.'LOGGED_OUT',
+                        'default' => '',
+                        'desc' => $this->l('The message displayed on the chat box for logged out users, leave empty to display default text'),
+                        'validate' => 'isAnything',
+                    ),
+                    array(
+                        'type'  => 'color',
+                        'label' => $this->l('Theme color:'),
+                        'name'  => $this->options_prefix.'THEME_COLOR',
+                        'default' => '#0084FF',
+                        'desc' => $this->l('The color of the chat bubble theme'),
+                        'validate' => 'isAnything',
+                    ),
+                    array(
+                        'type'  => 'text',
+                        'label' => $this->l('Dialog delay:'),
+                        'name'  => $this->options_prefix.'DIALOG_DELAY',
+                        'default' => '0',
+                        'desc' => $this->l('The amount of seconds the dialog stays open.'),
+                        'validate' => 'isUnsignedInt',
+                    ),
                     array(
                         'name' => 'separator',
                         'type' => 'html',
-                        'html_content' => '<h2>'.$this->l('Troubleshooting').'</h2>',
+                        'html_content' => '<h2>'.$this->l('Troubleshooting').'</h2><div class="alert alert-info">'.$this->l('If you have any issues create new ticket on https://github.com/kpodemski/phfbchat/issues').'</div>',
                         'ignore' => true
                     ),
 
@@ -169,6 +183,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
                         'type' => 'switch',
                         'label' => $this->l('Initialize Facebook API?'),
                         'name' => $this->options_prefix.'FB_API',
+                        'desc' => $this->l('From 1.1.0 there is not really a chance that you\'d like to turn off this option.'),
                         'values' => array(
                             array(
                                 'id' => 'active_on',
@@ -204,10 +219,13 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
     public function hookDisplayFooter()
     {
         $this->context->smarty->assign(array(
-            'phfbchat_page_id' => Configuration::get($this->options_prefix.'PAGE_ID'),
-            'phfbchat_app_id'  => Configuration::get($this->options_prefix.'APP_ID'),
-            'phfbchat_locale'  => Configuration::get($this->options_prefix.'LOCALE', (int) $this->context->language->id),
-            'phfbchat_init'  => Configuration::get($this->options_prefix.'FB_API', (int) $this->context->language->id),
+            'phfbchat_page_id'                 => Configuration::get($this->options_prefix.'PAGE_ID'),
+            'phfbchat_locale'                  => Configuration::get($this->options_prefix.'LOCALE', (int) $this->context->language->id),
+            'phfbchat_init'                    => Configuration::get($this->options_prefix.'FB_API'),
+            'phfbchat_logged_in'               => Configuration::get($this->options_prefix.'LOGGED_IN', (int) $this->context->language->id),
+            'phfbchat_logged_out'              => Configuration::get($this->options_prefix.'LOGGED_OUT', (int) $this->context->language->id),
+            'phfbchat_theme_color'             => Configuration::get($this->options_prefix.'THEME_COLOR'),
+            'phfbchat_greeting_dialog_delay'   => Configuration::get($this->options_prefix.'DIALOG_DELAY'),
         ));
 
         if (version_compare(_PS_VERSION_, '1.7', '>=')) {
