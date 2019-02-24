@@ -2,11 +2,17 @@
 
 ### How to use?
 
-- [ ] Download module from: https://goo.gl/6iNRkG
+- [ ] Download module from: http://bit.ly/prestahome-facebook-messenger
 - [ ] Get your Facebook Page ID by going to https://findmyfbid.com
 - [ ] Install module from Modules tab
 - [ ] Go to the Configuration page of module
-- [ ] Set Page ID, App ID and Langauge code
+- [ ] Set Page ID and Langauge code
+
+### Support
+
+I'll try my best to help you, tho module is for free, you can always create an Issue here on repository page
+
+Want to support me? Buy me a coffe :) [https://paypal.me/kpodemski](https://paypal.me/kpodemski)
 
 ### Requirements
 
