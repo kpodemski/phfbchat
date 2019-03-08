@@ -38,7 +38,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
     {
         $this->name = 'phfbchat';
         $this->tab = 'front_office_features';
-        $this->version = '1.1.1';
+        $this->version = '1.1.2';
         $this->author = 'PrestaHome';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -126,6 +126,15 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
                             </div>'
                         ,
                         'ignore' => true
+                    ),
+
+                    array(
+                        'type'  => 'text',
+                        'lang'  => true,
+                        'label' => $this->l('Localization:'),
+                        'name'  => $this->options_prefix.'LOCALE',
+                        'default' => 'en_US',
+                        'desc' => $this->l('for example en_US or es_ES or pl_PL'),
                     ),
 
                     array(
