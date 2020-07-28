@@ -38,7 +38,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
     {
         $this->name = 'phfbchat';
         $this->tab = 'front_office_features';
-        $this->version = '1.1.2';
+        $this->version = '1.1.3';
         $this->author = 'PrestaHome';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -143,7 +143,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
                         'label' => $this->l('Page ID:'),
                         'name'  => $this->options_prefix.'PAGE_ID',
                         'default' => '',
-                        'desc' => $this->l('You can use https://findmyfbid.com/ to find your FB Page ID'),
+                        'desc' => $this->l('You can use https://commentpicker.com/find-facebook-id.php to find your FB Page ID'),
                         'validate' => 'isUnsignedInt',
                     ),
 

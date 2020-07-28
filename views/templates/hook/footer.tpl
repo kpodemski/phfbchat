@@ -1,17 +1,19 @@
 {if $phfbchat_init}
 <div id="fb-root"></div>
 {/if}
-<script>
+<script data-keepinline="true">
 window.fbAsyncInit = window.fbAsyncInit || function() {
     FB.init({
-      xfbml  : true
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v7.0'
     });
-}
+  };
 (function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) return;
 js = d.createElement(s); js.id = id;
-js.src = 'https://connect.facebook.net/{$phfbchat_locale}/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+js.src = 'https://connect.facebook.net/{$phfbchat_locale}/sdk/xfbml.customerchat.js';
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
