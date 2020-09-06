@@ -39,7 +39,7 @@ function loadThirdPartyAssets() {ldelim}
         {rdelim} else {ldelim}
             _handleThirdPartyScripts();
         {rdelim}
-    {rdelim}, 1000);
+    {rdelim}, 2000);
 {rdelim}
 
 window.addEventListener('scroll', function() {

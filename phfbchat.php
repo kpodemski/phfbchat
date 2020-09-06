@@ -38,14 +38,14 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
     {
         $this->name = 'phfbchat';
         $this->tab = 'front_office_features';
-        $this->version = '1.1.5';
+        $this->version = '1.1.6';
         $this->author = 'PrestaHome';
         $this->need_instance = 0;
         $this->bootstrap = true;
 
         parent::__construct();
 
-        $this->displayName = $this->l('Facebook Messanger Chat plugin');
+        $this->displayName = $this->l('Facebook Messenger Chat plugin');
         $this->description = $this->l('Module to display Facebook Messenger chat on your store');
 
         $this->setOptionsPrefix('phfbchat');
@@ -122,7 +122,7 @@ class PhFbChat extends Module implements PrestaHomeConfiguratorInterface
                         'type' => 'html',
                         'html_content' => '
                             <div class="alert alert-info">
-                            '.$this->l('To use Messenger Chat you need to add your full domain to allowed ones by going to: FB Page -> Settings -> Messanger -> White-listed domains').'
+                            '.$this->l('To use Messenger Chat you need to add your full domain to allowed ones by going to: FB Page -> Settings -> Messenger -> White-listed domains').'
                             </div>'
                         ,
                         'ignore' => true
