@@ -42,13 +42,10 @@ function loadThirdPartyAssets() {ldelim}
     {rdelim}, 2000);
 {rdelim}
 
-window.addEventListener('scroll', function() {
-    loadThirdPartyAssets();
-}, false);
-
-document.onclick = function() {
+window.onload = function() {
     loadThirdPartyAssets();
 };
+
 window.fbAsyncInit = window.fbAsyncInit || function() {
     FB.init({
       autoLogAppEvents : true,
