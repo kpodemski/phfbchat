@@ -2,7 +2,7 @@
 
 ### How to use?
 
-- [ ] Download module from: http://bit.ly/prestahome-facebook-messenger
+- [ ] Download module from: https://bit.ly/prestahome-facebook-messenger
 - [ ] Get your Facebook Page ID by going to [here](https://commentpicker.com/find-facebook-id.php)
 - [ ] Install module from Modules tab
 - [ ] Go to the Configuration page of the module
